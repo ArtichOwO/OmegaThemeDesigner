@@ -3,10 +3,24 @@
 
 #include <QMainWindow>
 
-#include <string>
-#include "json.hpp"
+#include <QtWidgets>
+#include <QFileDialog>
+#include <QFile>
+#include <QDebug>
+#include <QString>
+#include <QLineEdit>
+#include <QSignalMapper>
+
+#include <iostream>
 #include <string>
 #include <fstream>
+#include <algorithm>
+
+#include "json.hpp"
+
+using namespace std;
+
+using json = nlohmann::json;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,6 +33,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+private slots:
+    bool loadProject();
+    void saveJSON();
+    //void testTestTest();
 
 private:
     Ui::MainWindow *ui;
