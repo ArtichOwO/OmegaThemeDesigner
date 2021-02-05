@@ -1,3 +1,4 @@
 # Omega Theme Designer
 
-[ALPHA]
+there's an god awful lot of things to do  
+god damn it
