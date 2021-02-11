@@ -45,6 +45,8 @@ bool MainWindow::loadProject()
     string JSONPathString = jsonPath.toStdString();
     cout << JSONPathString << endl;
 
+    QString jsonAbsolutePath (QFileInfo(jsonPath).absolutePath());
+
     string jsonFileContent;
 
     ifstream fichier(JSONPathString);
@@ -60,6 +62,12 @@ bool MainWindow::loadProject()
 
         ui->themeNameLineEdit->insert(themeName);
         ui->iconsFolderLineEdit->insert(iconsFolder);
+
+        QString iconsFolderPath = jsonAbsolutePath + "/" + iconsFolder + "/";
+
+        ui->iconCalculator->setPixmap(QPixmap(iconsFolderPath + "apps/calculation_icon.png"));
+        ui->iconRPN->setPixmap(QPixmap(iconsFolderPath + "apps/rpn_icon.png"));
+
         isProjectOpen = true;
         return true;
     } else {
@@ -72,6 +80,7 @@ void MainWindow::saveJSON() {
     if (isProjectOpen) {
         jsonFileContentParsed["name"] = ui->themeNameLineEdit->text().toStdString();
         jsonFileContentParsed["icons"] = ui->iconsFolderLineEdit->text().toStdString();
+        cout << jsonFileContentParsed << endl;
     } else {
         cout << "Nope, can't save" << endl;
     }

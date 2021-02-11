@@ -23,7 +23,7 @@
      <height>576</height>
     </size>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_10">
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1,0,1">
       <item>
@@ -237,14 +237,82 @@
           <property name="currentIndex">
            <number>0</number>
           </property>
-          <widget class="QWidget" name="tab_5">
+          <widget class="QWidget" name="tabMainIcons">
            <attribute name="title">
             <string>Principales</string>
            </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <widget class="QScrollArea" name="scrollArea_2">
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>192</width>
+                 <height>446</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_10">
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4">
+                  <item>
+                   <widget class="QLabel" name="iconCalculator">
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap resource="application.qrc">:/iconPlaceholder.png</pixmap>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>Calculation</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="iconRPN">
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap resource="application.qrc">:/iconPlaceholder.png</pixmap>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="label_8">
+                    <property name="text">
+                     <string>RPN</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
           </widget>
           <widget class="QWidget" name="tab_6">
            <attribute name="title">
             <string>Probabilité</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Page</string>
            </attribute>
           </widget>
          </widget>
@@ -408,6 +476,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="application.qrc"/>
+ </resources>
  <connections/>
 </ui>
